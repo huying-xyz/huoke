@@ -1,0 +1,198 @@
+/* pulse - 缩放呼吸 */
+@keyframes btnPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.btn-animate-pulse {
+    animation: btnPulse 1.5s ease-in-out infinite;
+}
+
+/* shake - 左右摇摆 */
+@keyframes btnShake {
+    from {
+        transform: translateX(-5px);
+    }
+
+    to {
+        transform: translateX(5px);
+    }
+}
+
+.btn-animate-shake {
+    animation: btnShake 0.6s linear infinite alternate;
+}
+
+/* jump - 上下跳动 */
+@keyframes btnJump {
+    0% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-5px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    75% {
+        transform: translateY(5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.btn-animate-jump {
+    animation: btnJump 1.5s linear infinite;
+}
+
+/* color - 背景闪烁 */
+@keyframes btnColorPulse {
+
+    0%,
+    100% {
+        background-color: #42a5f5;
+        color: #fff;
+    }
+
+    50% {
+        background-color: #7e57c2;
+        color: #fff;
+    }
+
+    75% {
+        background-color: #ec407a;
+        color: #fff;
+    }
+}
+
+.btn-animate-color {
+    animation: btnColorPulse 1.5s ease-in-out infinite;
+}
+
+/* shadow - 阴影呼吸 */
+@keyframes btnShadowPulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 5px rgba(66, 165, 245, 0.8);
+    }
+
+    50% {
+        box-shadow: 0 0 15px rgba(126, 87, 194, 0.8);
+    }
+}
+
+.btn-animate-shadow {
+    animation: btnShadowPulse 1.5s ease-in-out infinite;
+}
+
+/* gradient - 渐变流动 */
+.btn-animate-gradient {
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    background-color: #1ebd43;
+    color: #fff;
+    border: none;
+}
+
+.btn-animate-gradient::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(270deg, #ff5722, #1ebd43, #ff5722);
+    background-size: 600% 600%;
+    animation: gradientShift 3s ease infinite;
+    border-radius: inherit;
+    z-index: -1;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* shimmer - 流光扫过 */
+.btn-animate-shimmer {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-animate-shimmer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transform: skewX(-25deg);
+    animation: shimmerSweep 2s ease-in-out infinite;
+}
+
+@keyframes shimmerSweep {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 200%;
+    }
+}
+
+/* ripple - 波纹扩散 */
+.btn-animate-ripple {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-animate-ripple::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.35), transparent 70%);
+    transform: translate(-50%, -50%);
+    animation: rippleWave 2s ease-out infinite;
+}
+
+@keyframes rippleWave {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+
+    100% {
+        width: 300px;
+        height: 300px;
+        opacity: 0;
+    }
+}

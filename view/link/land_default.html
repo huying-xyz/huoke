@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{$link.page_title}</title>
+        <meta name="description" content="{$link.page_desc}">
+        <link rel="shortcut icon" type="image/x-icon" href="{$link.page_icon}">
+        <link rel="apple-touch-icon-precomposed" href="{$link.page_icon}">
+        <meta property="og:title" content="{$link.page_title}">
+        <meta property="og:description" content="{$link.page_desc}">
+        <meta property="og:image" content="{$link.page_icon}">
+    </head>
+    <body style="margin: 0;background: #fff;">
+        <script>
+        const code = "{$link.code}";
+        const channel_type = "{$link.channel_type}";
+        const www_url = "{$link.www_url}";
+
+        if (channel_type === 'website' && www_url) {
+            window.location.href = www_url;
+        } else if ((channel_type === 'securewebsite' || channel_type === 'qq' || channel_type === 'qqqun') && www_url) {
+            appendIframe(www_url);
+        } else {
+            appendIframe('https://huoke.xin/code/' + code);
+        }
+
+        function appendIframe(url) {
+            const i = document.createElement('iframe');
+            i.src = url;
+            i.style.display = 'block';
+            i.style.width = '100%';
+            i.style.height = '100vh';
+            i.style.border = 'none';
+            document.body.appendChild(i);
+        }
+        </script>
+    </body>
+</html>
