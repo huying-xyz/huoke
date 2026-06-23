@@ -3,7 +3,7 @@ define('INSTALL_LOCK', __DIR__ . '/../../.env');
 define('SQL_FILE', __DIR__ . '/mysql.sql');
 define('ENV_FILE', __DIR__ . '/../../.env');
 define('RUNTIME_DIR', __DIR__ . '/../../runtime');
-define('MIN_PHP_VERSION', '8.4.0');
+define('MIN_PHP_VERSION', '8.3.0');
 
 if (file_exists(INSTALL_LOCK)) {
     header('Content-Type: text/html; charset=utf-8');
