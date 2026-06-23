@@ -143,10 +143,10 @@ chmod -R 755 runtime/
 | `SITE_TRY` | 试用期天数 |
 | `ADMIN_DOMAIN` | 管理后台域名 |
 
-## 许可证
+## 开源协议
 
-[Apache-2.0](LICENSE)
+本项目基于 [MIT License](LICENSE) 开源，可自由使用、修改、商用。
 
 ## 作者
 
-HuYing ([https://huying.xyz](https://huying.xyz))
+获客大师 - HuYing ([https://huying.xyz](https://huying.xyz))
