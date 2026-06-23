@@ -149,4 +149,4 @@ chmod -R 755 runtime/
 
 ## 作者
 
-获客大师 - HuYing ([https://huying.xyz](https://huying.xyz))
+HuYing ([https://huying.xyz](https://huying.xyz))
