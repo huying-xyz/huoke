@@ -31,7 +31,7 @@ function checkEnv()
         'value' => PHP_VERSION,
     ]];
 
-    $extensions = ['pdo', 'pdo_mysql', 'curl', 'gd', 'mbstring', 'openssl', 'fileinfo', 'zip'];
+    $extensions = ['pdo', 'pdo_mysql', 'curl', 'gd', 'mbstring', 'openssl', 'fileinfo', 'zip', 'sg16'];
     $groups['extensions'] = [];
     foreach ($extensions as $ext) {
         $groups['extensions'][] = [
